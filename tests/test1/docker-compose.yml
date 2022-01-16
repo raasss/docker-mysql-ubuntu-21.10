@@ -1,0 +1,24 @@
+version: '3.7'
+
+networks:
+  private:
+    driver: bridge
+
+services:
+  mysql-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - private
+    ports:
+      - "3306"
+
+  mysql-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - private
+    ports:
+      - "3306"
