@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:21.10
 
 ENV MYSQL_DATABASE="dbname1"
 ENV MYSQL_USER="dbuser1"
